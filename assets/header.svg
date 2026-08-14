@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="1200" height="320" role="img" aria-label="Arthur Honorato — Desenvolvimento, Tecnologia, Projetos">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 300" width="1040" height="300" role="img" aria-label="Arthur Honorato — Desenvolvimento, Tecnologia, Projetos">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#0D1117"/>
@@ -19,90 +19,92 @@
     </linearGradient>
 
     <!-- malha de pontos: a textura de fundo, discreta -->
-    <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
-      <circle cx="1.5" cy="1.5" r="1.1" fill="#7FB3E0" fill-opacity="0.11"/>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1.2" fill="#7FB3E0" fill-opacity="0.11"/>
     </pattern>
 
-    <radialGradient id="vignette" cx="0.28" cy="0.5" r="0.85">
-      <stop offset="0%" stop-color="#7FB3E0" stop-opacity="0.13"/>
+    <radialGradient id="vignette" cx="0.3" cy="0.5" r="0.85">
+      <stop offset="0%" stop-color="#7FB3E0" stop-opacity="0.14"/>
       <stop offset="60%" stop-color="#7FB3E0" stop-opacity="0.03"/>
       <stop offset="100%" stop-color="#0D1117" stop-opacity="0"/>
     </radialGradient>
 
     <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
-      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feGaussianBlur stdDeviation="3.4" result="b"/>
       <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
 
-    <clipPath id="frame"><rect width="1200" height="320" rx="16"/></clipPath>
+    <clipPath id="frame"><rect width="1040" height="300" rx="14"/></clipPath>
   </defs>
 
   <g clip-path="url(#frame)">
-    <rect width="1200" height="320" fill="url(#bg)"/>
-    <rect width="1200" height="320" fill="url(#dots)"/>
-    <rect width="1200" height="320" fill="url(#vignette)"/>
+    <rect width="1040" height="300" fill="url(#bg)"/>
+    <rect width="1040" height="300" fill="url(#dots)"/>
+    <rect width="1040" height="300" fill="url(#vignette)"/>
 
     <!-- barra de acento superior, varrendo -->
-    <rect x="0" y="0" width="1200" height="2" fill="url(#accent)" opacity="0.55"/>
-    <rect x="-320" y="0" width="320" height="2" fill="#BFE0FF" opacity="0.85">
-      <animate attributeName="x" values="-320;1200" dur="6s" repeatCount="indefinite"/>
+    <rect x="0" y="0" width="1040" height="3" fill="url(#accent)" opacity="0.55"/>
+    <rect x="-300" y="0" width="300" height="3" fill="#BFE0FF" opacity="0.85">
+      <animate attributeName="x" values="-300;1040" dur="6s" repeatCount="indefinite"/>
     </rect>
 
-    <!-- ============ bloco de texto ============ -->
-    <text x="72" y="118" font-family="'Segoe UI Semibold','Helvetica Neue',Helvetica,Arial,sans-serif"
-          font-size="19" letter-spacing="7.5" fill="#7FB3E0" fill-opacity="0.92">TUEECODE</text>
+    <!-- ============ bloco de texto ============
+         Corpos maiores do que o "natural" de propósito: no celular o SVG é
+         reduzido a ~36% e tudo abaixo de 20px vira ilegível. -->
+    <text x="60" y="106" font-family="'Segoe UI Semibold','Helvetica Neue',Helvetica,Arial,sans-serif"
+          font-size="27" font-weight="600" letter-spacing="9" fill="#7FB3E0" fill-opacity="0.92">TUEECODE</text>
 
-    <text x="70" y="196" font-family="'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif"
-          font-size="66" font-weight="700" letter-spacing="-1.5" fill="#E6EDF3">Arthur Honorato</text>
+    <text x="58" y="186" font-family="'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif"
+          font-size="72" font-weight="700" letter-spacing="-1.6" fill="#E6EDF3">Arthur Honorato</text>
 
-    <rect x="72" y="222" width="118" height="2" fill="#7FB3E0" opacity="0.75"/>
+    <rect x="60" y="212" width="132" height="3" fill="#7FB3E0" opacity="0.75"/>
 
-    <text x="72" y="262" font-family="'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif"
-          font-size="21" fill="#8B949E">
+    <text x="60" y="256" font-family="'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif"
+          font-size="30" fill="#8B949E">
       Desenvolvimento
-      <tspan fill="#5580A8" dx="12">•</tspan>
-      <tspan dx="12">Tecnologia</tspan>
-      <tspan fill="#5580A8" dx="12">•</tspan>
-      <tspan dx="12">Projetos</tspan>
+      <tspan fill="#5580A8" dx="14">•</tspan>
+      <tspan dx="14">Tecnologia</tspan>
+      <tspan fill="#5580A8" dx="14">•</tspan>
+      <tspan dx="14">Projetos</tspan>
     </text>
 
     <!-- ============ motivo à direita: sinal vital em grade ============ -->
-    <g transform="translate(760, 60)" opacity="0.95">
-      <rect x="0" y="0" width="386" height="200" rx="12" fill="#0B1017" fill-opacity="0.72"
+    <g transform="translate(700, 74)" opacity="0.95">
+      <rect x="0" y="0" width="286" height="152" rx="11" fill="#0B1017" fill-opacity="0.72"
             stroke="#21262D" stroke-width="1"/>
 
       <!-- grade interna -->
       <g stroke="#7FB3E0" stroke-opacity="0.08" stroke-width="1">
-        <path d="M0 50H386M0 100H386M0 150H386"/>
-        <path d="M64 0V200M128 0V200M193 0V200M257 0V200M322 0V200"/>
+        <path d="M0 38H286M0 76H286M0 114H286"/>
+        <path d="M57 0V152M114 0V152M172 0V152M229 0V152"/>
       </g>
 
       <!-- traçado do sinal -->
-      <path d="M14 128 H70 l14 -34 l16 62 l15 -84 l18 96 l16 -40 h34 l12 -18 l14 30 l16 -52 l18 62 h48 l14 -26 l16 44 l18 -60 h63"
-            fill="none" stroke="url(#accent)" stroke-width="2.6"
+      <path d="M12 98 H54 l11 -26 l12 47 l11 -64 l14 73 l12 -30 h26 l9 -14 l11 23 l12 -40 l14 47 h36 l11 -20 l12 34 l14 -46 h47"
+            fill="none" stroke="url(#accent)" stroke-width="2.8"
             stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"
-            stroke-dasharray="900" stroke-dashoffset="900">
-        <animate attributeName="stroke-dashoffset" values="900;0" dur="3.2s" fill="freeze"/>
+            stroke-dasharray="700" stroke-dashoffset="700">
+        <animate attributeName="stroke-dashoffset" values="700;0" dur="3s" fill="freeze"/>
       </path>
 
       <!-- varredura do cursor -->
-      <rect x="0" y="6" width="1.5" height="188" fill="url(#fadeRight)" opacity="0">
-        <animate attributeName="x" values="10;372" dur="4.5s" begin="3.2s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0;0.9;0" dur="4.5s" begin="3.2s" repeatCount="indefinite"/>
+      <rect x="0" y="5" width="1.6" height="142" fill="url(#fadeRight)" opacity="0">
+        <animate attributeName="x" values="8;276" dur="4.5s" begin="3s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0.9;0" dur="4.5s" begin="3s" repeatCount="indefinite"/>
       </rect>
 
       <!-- nós de canto -->
       <g fill="#7FB3E0">
-        <circle cx="12" cy="12" r="2.5"/><circle cx="374" cy="12" r="2.5"/>
-        <circle cx="12" cy="188" r="2.5"/><circle cx="374" cy="188" r="2.5"/>
+        <circle cx="11" cy="11" r="2.6"/><circle cx="275" cy="11" r="2.6"/>
+        <circle cx="11" cy="141" r="2.6"/><circle cx="275" cy="141" r="2.6"/>
       </g>
 
-      <circle cx="366" cy="24" r="3.5" fill="#3FB950">
+      <circle cx="266" cy="22" r="3.6" fill="#3FB950">
         <animate attributeName="opacity" values="1;0.25;1" dur="2.4s" repeatCount="indefinite"/>
       </circle>
     </g>
 
     <!-- moldura -->
-    <rect x="0.5" y="0.5" width="1199" height="319" rx="16" fill="none" stroke="#21262D" stroke-width="1"/>
+    <rect x="0.5" y="0.5" width="1039" height="299" rx="14" fill="none" stroke="#21262D" stroke-width="1"/>
   </g>
 </svg>

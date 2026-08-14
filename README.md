@@ -8,13 +8,7 @@
 
 </div>
 
-<br>
-
 ## Sobre
-
-<table>
-<tr>
-<td valign="top">
 
 Escrevo código porque gosto — e porque é assim que fico bom no assunto.
 
@@ -26,15 +20,14 @@ consertado uma vez.
 
 Aprendo construindo. Escolho um problema que eu mesmo teria, e vou até esbarrar
 nas partes difíceis: modelagem de dados, política de acesso no banco, peso do
-bundle, estado assíncrono. Foi assim que aprendi Row Level Security, e foi assim
-que descobri que um `manualChunks` mal colocado pode triplicar o primeiro
+bundle, estado assíncrono. Foi assim que aprendi Row Level Security, e foi
+assim que descobri que um `manualChunks` mal colocado pode triplicar o primeiro
 acesso de um site.
 
 Hoje trabalho principalmente com **React + TypeScript no front** e **Supabase
 no back** — Postgres, autenticação e Edge Functions.
 
-</td>
-<td width="420" valign="top">
+<div align="center">
 
 <img src="./assets/stack.svg" alt="Camadas de uma aplicação: interface, domínio, repositório e Postgres com RLS" width="420">
 
@@ -44,47 +37,18 @@ no back** — Postgres, autenticação e Edge Functions.
   <img src="./assets/anime.gif" alt="" width="420">
 -->
 
-</td>
-</tr>
-</table>
-
-<br>
+</div>
 
 ## Atualmente
 
-<table>
-<tr>
-<td width="33%" valign="top">
-
-**Construindo**
-
-**THealth** — acompanhamento de saúde com o corpo em 3D no centro da tela.
-
-</td>
-<td width="33%" valign="top">
-
-**Aprendendo**
-
-Three.js e React Three Fiber a fundo: enquadramento de câmera, degradação de
-qualidade e orçamento de frame.
-
-</td>
-<td width="33%" valign="top">
-
-**Explorando**
-
-Deno nas Edge Functions do Supabase, e o que muda quando o mesmo código precisa
-rodar em Deno e em Node.
-
-</td>
-</tr>
-</table>
-
-<br>
+- **Construindo** — THealth, acompanhamento de saúde com o corpo em 3D no
+  centro da tela.
+- **Aprendendo** — Three.js e React Three Fiber a fundo: enquadramento de
+  câmera, degradação de qualidade e orçamento de frame.
+- **Explorando** — Deno nas Edge Functions do Supabase, e o que muda quando o
+  mesmo código precisa rodar em Deno e em Node.
 
 ## Tecnologias
-
-<div align="center">
 
 **Frontend**
 
@@ -115,10 +79,6 @@ rodar em Deno e em Node.
 ![Vercel](https://img.shields.io/badge/Vercel-0D1117?style=for-the-badge&logo=vercel&logoColor=E6EDF3)
 ![Netlify](https://img.shields.io/badge/Netlify-0D1117?style=for-the-badge&logo=netlify&logoColor=7FB3E0)
 
-</div>
-
-<br>
-
 ## Projetos
 
 ### THealth
@@ -148,11 +108,10 @@ Algumas decisões que valeram o trabalho:
 - **91 testes**, herméticos por construção — a suíte não consegue escrever em
   produção nem por acidente.
 
-`React 18` `TypeScript` `Vite` `Tailwind` `Three.js` `React Three Fiber` `Supabase` `Postgres + RLS` `Edge Functions (Deno)` `Vitest`
+`React 18` `TypeScript` `Vite` `Tailwind` `Three.js` `React Three Fiber`
+`Supabase` `Postgres + RLS` `Edge Functions (Deno)` `Vitest`
 
 <sub>Repositório privado.</sub>
-
----
 
 ### JobPilot
 
@@ -178,58 +137,31 @@ dissesse "enviado" só porque copiou estaria mentindo para o próprio usuário.
   `auth.uid()` em toda tabela.
 - **51 testes** cobrindo a lógica determinística.
 
-`React 19` `TypeScript (strict)` `Vite` `Tailwind` `Supabase` `TanStack Query` `dnd-kit` `Recharts` `pdf.js` `Tesseract.js` `PWA` `Vitest`
-
-<br>
+`React 19` `TypeScript (strict)` `Vite` `Tailwind` `Supabase` `TanStack Query`
+`dnd-kit` `Recharts` `pdf.js` `Tesseract.js` `PWA` `Vitest`
 
 ## Como eu trabalho
 
-<table>
-<tr>
-<td width="50%" valign="top">
-
-**Segredo não mora no cliente.**
-Chave de API vive no servidor. Se está no bundle, está público — não importa
-quão ofuscado.
-
-**O banco é a última linha de defesa.**
-Validação no formulário é conveniência. RLS é o que de fato separa os dados de
-duas pessoas.
-
-</td>
-<td width="50%" valign="top">
-
-**Peso é decisão de produto.**
-Quantos kB alguém baixa para ver a primeira tela é escolha, não consequência.
-
-**A interface não pode mentir.**
-Estimativa vem rotulada como estimativa. Erro diz o que fazer. Nada finge ter
-acontecido.
-
-</td>
-</tr>
-</table>
-
-<br>
+- **Segredo não mora no cliente.** Chave de API vive no servidor. Se está no
+  bundle, está público — não importa quão ofuscado.
+- **O banco é a última linha de defesa.** Validação no formulário é
+  conveniência. RLS é o que de fato separa os dados de duas pessoas.
+- **Peso é decisão de produto.** Quantos kB alguém baixa para ver a primeira
+  tela é escolha, não consequência.
+- **A interface não pode mentir.** Estimativa vem rotulada como estimativa.
+  Erro diz o que fazer. Nada finge ter acontecido.
 
 ## GitHub
 
 <div align="center">
 
-<img height="185" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=tueecode&theme=github_dark" alt="Resumo do perfil de tueecode">
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=tueecode&theme=github_dark" alt="Resumo do perfil de tueecode" width="100%">
 
-<br>
-
-<img height="180" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=tueecode&theme=github_dark" alt="Linguagens por repositório">
-<img height="180" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=tueecode&theme=github_dark" alt="Linguagens por volume de commits">
-
-<br><br>
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=tueecode&theme=github_dark" alt="Linguagens por repositório" width="360">
 
 <img src="https://raw.githubusercontent.com/tueecode/tueecode/output/snake-dark.svg" alt="Gráfico de contribuições animado" width="100%">
 
 </div>
-
-<br>
 
 ## Contato
 
