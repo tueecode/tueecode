@@ -1,0 +1,39 @@
+# Gera o gráfico animado de contribuições exibido no README.
+#
+# O SVG não é versionado em `main`: ele é publicado no branch `output`, que o
+# README consome por URL raw. Assim o histórico do perfil não acumula um
+# binário reescrito todo dia.
+name: Gráfico de contribuições
+
+on:
+  schedule:
+    # 03:00 UTC — meia-noite em Brasília, depois do fim do dia de commits.
+    - cron: "0 3 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+concurrency:
+  group: snake
+  cancel-in-progress: true
+
+jobs:
+  gerar:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Desenhar o gráfico
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: dist/snake-dark.svg?palette=github-dark
+
+      - name: Publicar no branch output
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

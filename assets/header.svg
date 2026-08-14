@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="1200" height="320" role="img" aria-label="Arthur Honorato — Desenvolvimento, Tecnologia, Projetos">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0D1117"/>
+      <stop offset="55%" stop-color="#10161F"/>
+      <stop offset="100%" stop-color="#0B1017"/>
+    </linearGradient>
+
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#5580A8"/>
+      <stop offset="50%" stop-color="#7FB3E0"/>
+      <stop offset="100%" stop-color="#5580A8"/>
+    </linearGradient>
+
+    <linearGradient id="fadeRight" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7FB3E0" stop-opacity="0"/>
+      <stop offset="45%" stop-color="#7FB3E0" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#7FB3E0" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- malha de pontos: a textura de fundo, discreta -->
+    <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1.1" fill="#7FB3E0" fill-opacity="0.11"/>
+    </pattern>
+
+    <radialGradient id="vignette" cx="0.28" cy="0.5" r="0.85">
+      <stop offset="0%" stop-color="#7FB3E0" stop-opacity="0.13"/>
+      <stop offset="60%" stop-color="#7FB3E0" stop-opacity="0.03"/>
+      <stop offset="100%" stop-color="#0D1117" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <clipPath id="frame"><rect width="1200" height="320" rx="16"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#frame)">
+    <rect width="1200" height="320" fill="url(#bg)"/>
+    <rect width="1200" height="320" fill="url(#dots)"/>
+    <rect width="1200" height="320" fill="url(#vignette)"/>
+
+    <!-- barra de acento superior, varrendo -->
+    <rect x="0" y="0" width="1200" height="2" fill="url(#accent)" opacity="0.55"/>
+    <rect x="-320" y="0" width="320" height="2" fill="#BFE0FF" opacity="0.85">
+      <animate attributeName="x" values="-320;1200" dur="6s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- ============ bloco de texto ============ -->
+    <text x="72" y="118" font-family="'Segoe UI Semibold','Helvetica Neue',Helvetica,Arial,sans-serif"
+          font-size="19" letter-spacing="7.5" fill="#7FB3E0" fill-opacity="0.92">TUEECODE</text>
+
+    <text x="70" y="196" font-family="'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif"
+          font-size="66" font-weight="700" letter-spacing="-1.5" fill="#E6EDF3">Arthur Honorato</text>
+
+    <rect x="72" y="222" width="118" height="2" fill="#7FB3E0" opacity="0.75"/>
+
+    <text x="72" y="262" font-family="'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif"
+          font-size="21" fill="#8B949E">
+      Desenvolvimento
+      <tspan fill="#5580A8" dx="12">•</tspan>
+      <tspan dx="12">Tecnologia</tspan>
+      <tspan fill="#5580A8" dx="12">•</tspan>
+      <tspan dx="12">Projetos</tspan>
+    </text>
+
+    <!-- ============ motivo à direita: sinal vital em grade ============ -->
+    <g transform="translate(760, 60)" opacity="0.95">
+      <rect x="0" y="0" width="386" height="200" rx="12" fill="#0B1017" fill-opacity="0.72"
+            stroke="#21262D" stroke-width="1"/>
+
+      <!-- grade interna -->
+      <g stroke="#7FB3E0" stroke-opacity="0.08" stroke-width="1">
+        <path d="M0 50H386M0 100H386M0 150H386"/>
+        <path d="M64 0V200M128 0V200M193 0V200M257 0V200M322 0V200"/>
+      </g>
+
+      <!-- traçado do sinal -->
+      <path d="M14 128 H70 l14 -34 l16 62 l15 -84 l18 96 l16 -40 h34 l12 -18 l14 30 l16 -52 l18 62 h48 l14 -26 l16 44 l18 -60 h63"
+            fill="none" stroke="url(#accent)" stroke-width="2.6"
+            stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"
+            stroke-dasharray="900" stroke-dashoffset="900">
+        <animate attributeName="stroke-dashoffset" values="900;0" dur="3.2s" fill="freeze"/>
+      </path>
+
+      <!-- varredura do cursor -->
+      <rect x="0" y="6" width="1.5" height="188" fill="url(#fadeRight)" opacity="0">
+        <animate attributeName="x" values="10;372" dur="4.5s" begin="3.2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0.9;0" dur="4.5s" begin="3.2s" repeatCount="indefinite"/>
+      </rect>
+
+      <!-- nós de canto -->
+      <g fill="#7FB3E0">
+        <circle cx="12" cy="12" r="2.5"/><circle cx="374" cy="12" r="2.5"/>
+        <circle cx="12" cy="188" r="2.5"/><circle cx="374" cy="188" r="2.5"/>
+      </g>
+
+      <circle cx="366" cy="24" r="3.5" fill="#3FB950">
+        <animate attributeName="opacity" values="1;0.25;1" dur="2.4s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+
+    <!-- moldura -->
+    <rect x="0.5" y="0.5" width="1199" height="319" rx="16" fill="none" stroke="#21262D" stroke-width="1"/>
+  </g>
+</svg>
